@@ -38,6 +38,15 @@
     padding: 5px 10px 5px 10px;
     
     background-color: #C00000;
+
+    transition: 0.2s;
+}
+.sections__header:hover{
+    padding: 7px 12px 7px 12px;
+    background-color: black;
+    color: #C00000;
+
+    border: 2px solid #C00000;
 }
 
 /*...*/
@@ -79,5 +88,39 @@
     color: rgb(255, 255, 255);
     font-size: 1.20rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*...*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 165px;
+
+    box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
+    -webkit-box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
+    -moz-box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
+}
+
+.div__footer{
+    display: flex;
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+.enlace__footer{
+    text-decoration: none;
+    color: black;
+
+    font-size: 5rem
+}
+
+.enlace__footer:hover {
+    color: rgba(192,0,0,0.76);
+
+    font-size: 5.50rem
 }
 

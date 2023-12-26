@@ -1,4 +1,4 @@
-// 1er Pre-entrega JavaScript //
+// 2da Pre-entrega JavaScript //
 
 function bienvenida(nombre) {
     while(nombre === null || nombre === "") {
@@ -8,52 +8,64 @@ function bienvenida(nombre) {
     return nombre; 
 }
 
-let nombre = prompt("¿Cuál es tu nombre?");
+let nombre = prompt("¡Hola!, ¿Cuál es tu nombre?");
 nombre = bienvenida(nombre); 
 
 alert("Hola " + nombre + ", te damos la bienvenida a Gaming-tech.");
 
-const play = 1000;
+const productos = [
+    {nombre: "Playstation 5", precio: 1000},
+    {nombre: "Xbox S", precio: 850},
+    {nombre: "Computadora", precio: 750}
+];
 
-const xbox= 850;
+alert ("Estos son nuestros productos disponibles.🎮 ");
 
-const computadora = 750;
+productos.forEach((producto) => {
+    alert("Producto: " + producto.nombre + ". Precio: $" + producto.precio + ".");
+})
 
+
+
+const carrito = [];
 let continuar = "si";
 
-let precio1 = 0;
-let precio2 = 0;
-let precio3 = 0;
-
 while (continuar === "si" || continuar === "Si") {
-    let producto = prompt("¿Cual producto te gustaria comprar?");
+    let productoElegido = prompt("¿Qué producto te gustaría comprar " + nombre + "?");
+    let elegido = productos.find((producto) => producto.nombre.toLowerCase() === productoElegido.toLowerCase()); //toLowerCase es un método en JavaScript que se utiliza para convertir una cadena de texto a minúsculas.
 
-    switch (producto){
-        case "Play 5":
-            precio1 = play;
-            break
-        case "Xbox S":
-            precio2 = xbox;
-            break
-        case "Computadora":
-            precio3 = computadora;
-            break
-        default:
-            alert ("Producto no encontrado");
+    if (elegido != "" && elegido !== undefined) {
+        carrito.push(elegido);
+        alert(`"${elegido.nombre}" ha sido agregado al carrito.`);
+    } else {
+        alert(`"${elegido.nombre}" no está disponible en la tienda.`);
     }
-    continuar = prompt("¿Deseas continuar la compra? si o no.");
+
+    continuar = prompt("¿Deseas continuar la compra? (si o no)");
 }
 
-let valorDeCompra = precio1 + precio2 + precio3;
+let total = carrito.reduce((acum, item) => acum + item.precio, 0);
 
-alert("El total a pagar es = " + valorDeCompra + " . Gracias " + nombre + " por su compra!");
+alert("El valor de su compra " + nombre + ", es de $" + total + ". Gracias por su compra!");
 
-let satisfecho = prompt("¿Estuviste comodo con tus compras? si o no.")
 
-if (satisfecho === "si" || satisfecho === "Si") {
-    alert("Nos pone felices que hayas estado comodo/a!")
-}else {
-    alert("Disculpas, espemos brindar un mejor servicio la proxima vez.")
+
+let baja = [1, 2, 3, 4];
+let media = [5, 6, 7];
+let alta = [8, 9, 10];
+
+let puntaje = Number(prompt("¿Que calificacion del 1 a 10 le das al mecanismo de compra?"))
+
+if ( baja.includes(puntaje)) {
+    alert("Tu calificacion fue baja 😔, esperamos que puedas tener proximamente una mejor experiencia.");
+} else if(media.includes(puntaje)) {
+    alert("Tu calificacion fue media 🙂, trataremos que proximamente estes aun más comodo.");
+} else if (alta.includes(puntaje)) {
+    alert("Tu calificacion fue buena 😁, esperemos seguir con este buen servicio.");
+}else{
+    alert("Valor no válido.");
 }
 
-//La idea de esta entrega es que al entrar y presentarte, puedas elegir si comprar 1 de las 3 mercaderias, o si queres, las 3 y luego salga el resultado de la suma de todos lo productos comprados(si es que es mas de 1).
+// Página estilo e-commerce con "carrito".
+
+// 2da Pre-entrega con mecanismo de busqueda con FIND en productos(estos dentro de array separado por objetos), y mecanismo con REDUCE para contalibilizar en un array aparte vacio, el total de la compra.
