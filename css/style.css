@@ -1,55 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Quicksand:wght@600&family=Tektur:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300&family=Quicksand:wght@600&family=Tektur:wght@900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header {
+/*SECCION HEADER👇*/
+
+.header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 15px;
 
-    box-shadow: 0px 5px 13px 0px rgba(192,0,0,0.75);
-    -webkit-box-shadow: 0px 5px 13px 0px rgba(192,0,0,0.75);
-    -moz-box-shadow: 0px 5px 13px 0px rgba(192,0,0,0.75);
+    background-color: #1b1d1d;
 }
 
-.div_left_header {
-    padding: 30px;
-}
-
-.div_right_header {
-    padding: 30px;
-    display: flex;
-    gap: 1rem;
-}
-
-.img__header {
-    width: 120px;
-}
-
-.sections__header{
-    text-decoration: none;
-    color: black;
+.header__div__left{
     font-size: 1.50rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 5px 10px 5px 10px;
+}
+
+.header__div__logo{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    font-family: 'Tektur', sans-serif;
+}
+
+.header__div__right{
+    display: flex;
+    align-items: center;
+}
+
+.header__div__right__sons{
+    padding: 10px;
+    align-items: center;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15rem;
+}
+
+.header__div__right__items{
+    text-decoration: none;
+    color: white;
+}
+.header__div__right__items:hover{
+   color: #FFC800;
+   text-decoration: underline 2px #FFC800;
+}
+
+.header__div__right__item{
+    text-decoration: none;
+    color: white;
+    font-size: 1.09rem;
+}
+.header__div__right__item:hover{
+    text-decoration: none;
+    color: #FFC800;
+}
+
+.separador{
+    font-size: 1.20rem;
+    font-weight: 600;
+    color: white;
+}
+
+/**********/
+
+/*SECCION INICIO👇*/
+
+.main__inicio{
+    background-image: url(../img/heroo.png);
+    background-position: center;
+    background-size: cover;
+
+    min-height: 60.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-left: 170px;
+}
+
+.main__section__inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__section__1{
+    font-size: 5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 2px #FFC800;
+
+    color: white;
+}
+
+.main__section__2{
+    font-size: 4rem;
+    color: white;
+
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.main__section__3{
+    font-size: 2rem;
+    text-align: center;
+
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.main__section__3__item{
+    text-decoration: none;
+    border-radius: 20px;
+    background-color:  #FFC800;
+    color: white;
+
+    padding: 10px 5px 10px 5px;
+
+    transition: 0.5s;
+}
+.main__section__3__item:hover{
+    background-color:  white;
+    color: #FFC800;
+}
+
+/************/
+
+.section__marcas{
+    background-color: #1b1d1d;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.section__marcas__titulo{
+    color: white;
+    font-size: 2.50rem;
+    font-family: 'Quicksand', sans-serif;
+
+    margin-bottom: 15px;
+}
+
+.div__marcas{
+    background-color: grey;
+    border-radius: 30px;
+    box-shadow: 10px 10px 11px 0px rgba(255,200,0,0.75);
+    -webkit-box-shadow: 10px 10px 11px 0px rgba(255,200,0,0.75);
+    -moz-box-shadow: 10px 10px 11px 0px rgba(255,200,0,0.75);
     
-    background-color: #C00000;
+    height: 450px;
+    width: 1650px;
 
-    transition: 0.2s;
-}
-.sections__header:hover{
-    padding: 7px 12px 7px 12px;
-    background-color: black;
-    color: #C00000;
-
-    border: 2px solid #C00000;
+    display: flex;
+    align-items: center;
 }
 
-/*...*/
+.div__secundario__marcas{
+    background-color: rgba(255,200,0,0.75);
+    border-radius: 20px;
+
+    min-height: 400px;
+    width: 300px;
+
+    display: inline-block;
+    justify-content: center;
+    margin-right: 30px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.div__secundario__marcas:hover{
+    transform: scale(1.05)
+}
+
+.imagenes__marcas{
+    min-height: 400px;
+    width: 280px;
+
+    border-radius: 20px;
+}
+/************/
+
+/*SECCION TIENDA👇*/
+
+.main__tienda{
+    background-color: #3a3d3d;
+    min-height: 90.5vh;
+}
 
 .productos__titulo {
     font-size: 3rem;
@@ -58,8 +207,6 @@
 
     display: flex;
     justify-content: center;
-
-    margin-top: 50px;
 }
 
 .productos {
@@ -88,39 +235,5 @@
     color: rgb(255, 255, 255);
     font-size: 1.20rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-/*...*/
-
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 165px;
-
-    box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
-    -webkit-box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
-    -moz-box-shadow: 0px -5px 13px 0px rgba(192,0,0,0.76);
-}
-
-.div__footer{
-    display: flex;
-    align-items: center;
-
-    transition: 0.4s;
-}
-
-.enlace__footer{
-    text-decoration: none;
-    color: black;
-
-    font-size: 5rem
-}
-
-.enlace__footer:hover {
-    color: rgba(192,0,0,0.76);
-
-    font-size: 5.50rem
 }
 
