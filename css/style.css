@@ -197,7 +197,7 @@
 
 .main__tienda{
     background-color: #3a3d3d;
-    min-height: 90.5vh;
+    min-height: 70.5vh;
 }
 
 .productos__titulo {
@@ -231,9 +231,74 @@
 }
 
 .cajas__productos__button {
-    text-decoration: underline 1px rgb(0, 0, 0);
+    text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1.20rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.producto-agregar{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/***************/
+
+.div__pather__carrito{
+    background-color: #3a3d3d;
+    min-height: 50vh;
+}
+
+.carrito__title{
+    font-size: 5rem;
+    -webkit-text-stroke: 1.5px white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.carrito{
+
+}
+
+.carrito__class{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.valor__carrito{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgba(255,200,0,0.75);
+    padding: 3px;
+}
+
+.borrar__carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+}
+
+.borrar__carrito__b{
+    background-color: #bd2e2e;
+    border-radius: 15px;
+    padding: 10px;
+
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
