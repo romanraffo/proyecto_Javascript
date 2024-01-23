@@ -67,7 +67,7 @@ function valorCarrito(){ // Se calcula el valor total de carrito, mostrandolo de
 };
 
 function guardarCarritoPersistente() {
-    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito)); // JSON.stringify(carrito) lo que hace como "valor" convierte al array "carrito" en cadena de texto para almacenarla en el storage
 }
 
 function obtenerCarritoPersistente() {

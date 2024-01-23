@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer-tech // Tienda</title>
+    <title>Gamer-tech // Contacto</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 <body>
-    
+
     <header class="header">
         <div class="header__div__left">
             <a href="./index.html" class="header__div__logo"><h1>Gamer-tech.</h1></a>
@@ -25,22 +25,40 @@
             <div class="header__div__right__sons"><a href="" class="header__div__right__item"><i class="bi bi-telephone-forward"></i>080 3456 3456</a></div>
         </div>
     </header>
+    
+    <section class="section__contacto">
 
-    <main class="main__tienda">
-        <h2 class="productos__titulo">¡Comprá el producto gamer que quieras!</h2>
-        <section id="contenedor-productos" class="productos">
-            <!-- Esta parte se rellena en JS, Seccion "main.js" -->
-        </section>
-    </main>
+        <form action="" class="form__contacto">
 
-    <div class="div__pather__carrito">
-        <div class="carrito__title">Carrito<i class="bi bi-cart-plus"></i></div>
-        <div class="carrito" id="carrito"></div>
-        <div id="valorCarrito"></div>
-        <div class="borrar__carrito">
-            <button class="borrar__carrito__b" id="borrarCarrito" type="reset">Borrar Carrito</button>
-        </div>
-    </div>
+            <h2 class="contacto__titulo">Contacto</h2>
+
+            <h3 class="contacto__subtitulo">ante cualquier duda comunícate con nosotros</h3>
+
+            <div class="form__div">
+
+                <label for="">Nombre</label>
+                <input class="input__contacto" type="text" name="name" id="name" placeholder="Nombre">
+
+                <label for="phone">Telefono</label>
+                <input class="input__contacto" type="tel" name="phone" id="phone" placeholder="Telefono">
+
+                <label for="">E-mail</label>
+                <input class="input__contacto" type="email" name="email" id="email" placeholder="E-mail">
+
+                <label for="">Mensaje</label>
+                <textarea class="input__contacto" name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+
+                <div class="div__politicas">
+                    <a href="" class="">Politica de privacidad</a>
+                    <a href="">Terminos y condiciones</a>
+                </div>
+
+                <input type="submit" value="Enviar" class="input__contacto__2">
+
+            </div>
+
+        </form>
+    </section>
 
     <section class="item__order">
         <div class="item__order__2">
@@ -91,8 +109,7 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
