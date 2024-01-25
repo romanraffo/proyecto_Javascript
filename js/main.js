@@ -1,7 +1,22 @@
 const productos = [
-    { id: "Playstation", nombre: "Playstation 5", precio: 1000, imagen: "../img/ps5.webp"},
-    { id: "Xbox", nombre: "Xbox S", precio: 850, imagen: "../img/xbox-s.png"},
-    { id: "Computadora", nombre: "Computadora", precio: 750, imagen: "../img/computadora.png"},
+    {id: "consola-01", nombre: "Playstation 5", precio: 500, imagen: "../img/play5.webp", categoria:{nombre: "Consolas", id: "Consolas"}},
+    {id: "consola-02", nombre: "Xbox S", precio: 290, imagen: "../img/xboxS.png", categoria:{nombre: "Consolas", id: "Consolas"}},
+    {id: "consola-03", nombre: "Nintendo Switch", precio: 215, imagen: "../img/Nintendo.Switch.webp", categoria:{nombre: "Consolas", id: "Consolas"}},
+    {id: "consola-04", nombre: "Playstation 4", precio: 310, imagen: "../img/play4.webp", categoria:{nombre: "Consolas", id: "Consolas"}},
+    {id: "Computadora-01", nombre: "Pc Gamer Ryzen", precio: 540, imagen: "../img/pc.ryzen.png", categoria:{nombre: "Computadoras", id: "Computadoras"}},
+    {id: "Computadora-02", nombre: "Pc Gamer Intel", precio: 699, imagen: "../img/pc.intel.png", categoria:{nombre: "Computadoras", id: "Computadoras"}},
+    {id: "Notebook-01", nombre: "Notebook BANGHO Max", precio: 500, imagen: "../img/notebook.bangho.jpg", categoria:{nombre: "Notebooks", id: "Notebooks"}},
+    {id: "Notebook-02", nombre: "Notebook LENOVO", precio: 300, imagen: "../img/notebook.lenovo.jpg", categoria:{nombre: "Notebooks", id: "Notebooks"}},
+    {id: "Notebook-03", nombre: "Notebook HP 15.6", precio: 550, imagen: "../img/notebook.Hp.jpg", categoria:{nombre: "Notebooks", id: "Notebooks"}},
+    {id: "Mouse-01", nombre: "Mouse Logitech G502", precio: 40, imagen: "../img/mouse.logi.png", categoria:{nombre: "Mouses", id: "Mouses"}},
+    {id: "Mouse-02", nombre: "Mouse Logitech G300S", precio: 34, imagen: "../img/mouse.logi2.png", categoria:{nombre: "Mouses", id: "Mouses"}},
+    {id: "Mouse-03", nombre: "Mouse Redragon", precio: 40, imagen: "../img/mouse.redragon.png", categoria:{nombre: "Mouses", id: "Mouses"}},
+    {id: "Auricular-01", nombre: "Auriculares Philips", precio: 100, imagen: "../img/auriculares.philips.webp", categoria:{nombre: "Auriculares", id: "Auriculares"}},
+    {id: "Auricular-02", nombre: "Airpods Max Apple", precio: 350, imagen: "../img/auriculares.apple.webp", categoria:{nombre: "Auriculares", id: "Auriculares"}},
+    {id: "Auricular-03", nombre: "Auriculares Hyperex", precio: 40, imagen: "../img/auriculares.Hyperex.png", categoria:{nombre: "Auriculares", id: "Auriculares"}},
+    {id: "Control-01", nombre: "Joystick Ps5", precio: 60, imagen: "../img/joystick.ps5.png", categoria:{nombre: "Controles", id: "Controles"}},
+    {id: "Control-02", nombre: "Joystick Xbox-S", precio: 55, imagen: "../img/joystick.xbox.jpg", categoria:{nombre: "Controles", id: "Controles"}},
+
 ];
   
 const contenedorProductos = document.querySelector("#contenedor-productos"); //Se llaman a los contenedores principales segun su id.
@@ -18,8 +33,11 @@ function cargarProductos() { //Se crea la funcion cargarproductos, donde aca se 
         div.innerHTML = `
             <img src="${producto.imagen}" alt="${producto.nombre}" class="productos__img">
             <h2 class="cajas__productos__titulo">${producto.nombre}</h2>
-            <p class="cajas__productos__parrafo"><a href="" class="cajas__productos__button">Valor: $${producto.precio}</a></p>
-            <button class="producto-agregar" id="${producto.id}">Agregar carrito</button>
+            <p class="cajas__productos__parrafo">
+            <a href="" class="cajas__productos__button">$${producto.precio} USD</a>
+            <p class="cajas__productos__parrafo__descripcion">  </p>
+            </p>
+            <div class="div__productos-agregar"> <button class="producto-agregar" id="${producto.id}">Agregar carrito</button> </div>
         `
 
         contenedorProductos.append(div);

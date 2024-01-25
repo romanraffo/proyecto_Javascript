@@ -442,54 +442,91 @@
 /*SECCION TIENDA👇*/
 
 .main__tienda{
-    background-color: #3a3d3d;
+    background-color: #ffffff;
     min-height: 70.5vh;
 }
 
 .productos__titulo {
     font-size: 3rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-text-stroke: 1px red;
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+    flex-wrap: wrap;
+}
+
+.cajas__productos {
+    background-color: #d6d6d6;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+}
+
+.productos__img {
+    width: 300px;
+    min-height: 300px;
+}
+
+.cajas__productos__titulo {
+    font-family: 'Quicksand', sans-serif;
 
     display: flex;
     justify-content: center;
 }
 
-.productos {
-    display: flex;
-    justify-content: space-around;
-}
-
-.cajas__productos {
-    background-color: #bd2e2e;
-    margin: 50px;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-.productos__img {
-    width: 300px;
-}
-
-.cajas__productos__titulo {
-    display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 .cajas__productos__button {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.20rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+
+.div__productos-agregar{
+    display: flex;
+    justify-content: center;
+}
+
+.cajas__productos__parrafo__descripcion{
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Quicksand', sans-serif;
+
+    color: #adadad;
 }
 
 .producto-agregar{
+    background-color: #171717;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.95rem;
+
+    color: rgb(233, 231, 231);
+    font-family: 'Quicksand', sans-serif;
+
+    transition: 0.3s;
+}
+.producto-agregar:hover{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 10px;
 
-    color: rgb(0, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.75);
+    font-family: 'Quicksand', sans-serif;
 }
 
 /***************/
