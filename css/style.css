@@ -48,6 +48,14 @@
     font-size: 1.15rem;
 }
 
+.header__div__right__sons__left{
+    padding: 10px;
+    align-items: center;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15rem;
+}
+
 .header__div__right__items{
     text-decoration: none;
     color: white;
@@ -81,6 +89,54 @@
     padding: 2px 4px 2px 4px;
 
     margin-left: 3px;
+}
+
+/**********/
+
+.header__media__quaries{
+    display: none;
+}
+
+.header__volver{
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'Quicksand', sans-serif;
+    color: #FFC800;
+    text-decoration: none;
+
+    padding-bottom: 30px;
+}
+    
+.header__media__quaries__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__media__quaries__logo{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    font-family: 'Tektur', sans-serif;
+    font-size: 3rem;
+}
+
+.header__media__quaries__secciones__pather{
+    padding: 20px;
+}
+
+.header__media__quaries__secciones{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.45rem;
+    color: white;
+    text-decoration: none;
 }
 
 /**********/
@@ -143,6 +199,9 @@
 .main__section__3__item:hover{
     background-color:  white;
     color: #FFC800;
+}
+
+.separado__svg{
 }
 
 /************/
@@ -477,6 +536,11 @@
     text-decoration: underline 2px black;
 }
 
+.incons-secciones{
+    font-size: 1.30rem;
+    margin-left: 2px;
+}
+
 /************/
 
 .productos {
@@ -535,7 +599,7 @@
     color: #adadad;
 }
 
-.producto-agregar{
+.agregar__carrito{
     background-color: #171717;
     border-radius: 15px;
     margin-top: 10px;
@@ -547,7 +611,7 @@
 
     transition: 0.3s;
 }
-.producto-agregar:hover{
+.agregar__carrito:hover{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 10px;
@@ -557,61 +621,6 @@
 }
 
 /***************/
-
-.div__pather__carrito{
-    background-color: #3a3d3d;
-    min-height: 50vh;
-}
-
-.carrito__title{
-    font-size: 5rem;
-    -webkit-text-stroke: 1.5px white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-}
-.carrito{
-
-}
-
-.carrito__class{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.50rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-}
-
-.valor__carrito{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.50rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: rgba(255,200,0,0.75);
-    padding: 3px;
-}
-
-.borrar__carrito{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 3rem;
-}
-
-.borrar__carrito__b{
-    background-color: #bd2e2e;
-    border-radius: 15px;
-    padding: 10px;
-
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
 /***************/
 
 /*SECCION CONTACTO👇*/
@@ -792,4 +801,91 @@
     color: white;
 }
 
+/**********/
 
+/** Seccion Media-quaries **/
+
+@media (max-width:950px){
+
+    /*header👇*/
+
+    .header__div__right__sons__left{
+        display: none;
+    }
+
+    .separador{
+        display: none;
+    }
+
+    .header__media__quaries{
+        display: flex;
+    }
+
+    /*header de media quaries👇*/
+
+    .menu__mq{
+        font-size: 2.70rem;
+        color: white;
+    }
+
+    .header__media__quaries__section{
+        min-height: 100vh;
+        background-color: #1b1d1d;
+    }
+  }
+
+@media (max-width:705px){
+
+    /*header👇*/
+
+    .header__div__left {
+        font-size: 1.00rem;
+    }
+
+}
+
+@media (max-width:515px){
+
+    /*header👇*/
+
+    .header__div__left {
+        font-size: 0.70rem;
+    }
+
+    .header__div__left {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:455px){
+
+    /*header👇*/
+
+    .header__div__right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__div__left {
+        font-size: 0.65rem;
+    }
+
+}
+
+@media (max-width:375px){
+
+    /*header👇*/
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column; /*Cambio a estado de column en header*/
+        align-items: center;
+    }
+
+    .header__div__left {
+        font-size: 0.75rem;
+    }
+
+}
