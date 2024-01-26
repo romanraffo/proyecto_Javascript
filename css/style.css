@@ -73,6 +73,16 @@
     color: white;
 }
 
+.numero__carrito{
+    border-radius: 20px;
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+
+    padding: 2px 4px 2px 4px;
+
+    margin-left: 3px;
+}
+
 /**********/
 
 /*SECCION INICIO👇*/
@@ -446,15 +456,28 @@
     min-height: 70.5vh;
 }
 
-.productos__titulo {
-    font-size: 3rem;
-    -webkit-text-stroke: 1px red;
-
+.tienda__seccion{
     display: flex;
     justify-content: center;
+    list-style: none;
 
-    flex-wrap: wrap;
+    background-color: #ddad00;
 }
+
+.tienda__secciones{
+    border: none;
+    background-color: transparent;
+
+    font-size: 1.15rem;
+    font-family: 'Quicksand', sans-serif;
+
+    padding: 15px;
+}
+.tienda__secciones:hover{
+    text-decoration: underline 2px black;
+}
+
+/************/
 
 .productos {
     display: flex;
@@ -468,8 +491,12 @@
     background-color: #d6d6d6;
     margin: 20px;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 0.5px solid black;
+
+    box-shadow: 6px 5px 9px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 6px 5px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 5px 9px 0px rgba(0,0,0,0.75);
 }
 
 .productos__img {

@@ -22,7 +22,7 @@ const productos = [
 const contenedorProductos = document.querySelector("#contenedor-productos"); //Se llaman a los contenedores principales segun su id.
 const contenedorCarrito = document.querySelector("#carrito"); //Se llaman a los contenedores principales segun su id.
 const contenedorValorCarrito = document.querySelector("#valorCarrito"); //Se llaman a los contenedores principales segun su id.
-const carrito = obtenerCarritoPersistente(); // Cargar el carrito desde localStorage al iniciar
+const carrito = [];
 //const carrito = []; Remplazo carrito vacio por: const carrito = obtenerCarritoPersistente(); para dejar guardados los productos anteriormente seleccionados
 
 function cargarProductos() { //Se crea la funcion cargarproductos, donde aca se cargan los elementos html y luego se proporcionan los eventos.
@@ -42,8 +42,8 @@ function cargarProductos() { //Se crea la funcion cargarproductos, donde aca se 
 
         contenedorProductos.append(div);
 
-        const botonAgregar = div.querySelector(".producto-agregar"); //Tiene que ser "div.querySelector" para que tome a los 3 productos. y no document.quary...
-        botonAgregar.addEventListener("click", () => agregarAlCarrito(producto));
+        // const botonAgregar = div.querySelector(".producto-agregar"); //Tiene que ser "div.querySelector" para que tome a los 3 productos. y no document.quary...
+        // botonAgregar.addEventListener("click", () => agregarAlCarrito(producto));
     })
 }
 
@@ -110,4 +110,3 @@ function borrarCarrito() {
 };
 
 cargarProductos(); //Cargando solo la funcion "cargarProductos()" se cargan todos los function ya que estan conectados todos entre si.
-
