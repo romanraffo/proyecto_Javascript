@@ -27,7 +27,11 @@ const botonesSecciones = document.querySelectorAll(".boton__categoria");
 
 let agregarCarrito = document.querySelector(".agregar__carrito");
 
+let numeroCarrito = document.querySelector("#numero-carrito");
+
 const carrito = [];
+
+let nuevoContadorCarrito = 0;
 
 
 
@@ -78,6 +82,28 @@ function renovarAgregarCarrito(){
 }
 
 function agregarAlCarrito(e){
-    let productoId = e.currentTarget.id
-    const productoAgregado = productos.find(producto => producto.id === productoId); //ME QUEDE EN ESTA PARTE!!! 
+    let IdDelProducto = e.currentTarget.id
+    const productoAgregado = productos.find(producto => producto.id === IdDelProducto); 
+    
+    if(carrito.some(producto => producto.id === IdDelProducto)){
+        const index = carrito.findIndex(producto => producto.id === IdDelProducto);
+        carrito[index].cantidad++;
+    }else{
+        productoAgregado.cantidad = 1;
+        carrito.push(productoAgregado);
+    }
+
+    Swal.fire({
+        title: "Producto agregado al carrito",
+        icon: "success"
+    });
+
+    numeroDelCarrito ()
+
+    localStorage.setItem("clave-carrito", JSON.stringify(carrito))
+}
+
+function numeroDelCarrito (){
+    let numeroActualizado = carrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0)
+    numeroCarrito.innerText = numeroActualizado;
 }

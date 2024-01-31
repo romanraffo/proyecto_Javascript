@@ -28,14 +28,46 @@
         </div>
     </header>
 
-    <div class="div__pather__carrito">
-        <div class="carrito__title">Carrito<i class="bi bi-cart-plus"></i></div>
-        <div class="carrito" id="carrito"></div>
-        <div id="valorCarrito"></div>
-        <div class="borrar__carrito">
-            <button class="borrar__carrito__b" id="borrarCarrito" type="reset">Borrar Carrito</button>
+    <main class="main__carrito">
+        <div class="carrito__compras__titulo">
+            <p class="carrito__compras__parrafo__titulo">Carrito de compras</p>
         </div>
-    </div>
+        <div class="carrito__vacio">
+            <p class="carrito__compras__parrafo__vacio">No tenes productos en el carrito...<i class="bi bi-cart2"></i></p>
+        </div>
+        <div class="contenedor__carrito">
+            <div class="subcontenedor__carrito">
+                <div class="imagen__carrito">
+                    <img src="../img/play5.webp" alt="" class="imagen__carrito__tamanio">
+                </div>
+                <div class="nombre__producto__carrito">
+                    Playstation 5
+                </div>
+                <div class="cantidad__productos__carrito">
+                    cantidad: 2
+                </div>
+                <div class="precio__por__unidad__carrito">
+                    valor por unidad: $500 USD
+                </div>
+                <div class="borrar__producto__carrito">
+                    <button class="remove__carrito"><i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor__carrito__elementos">
+            <div class="subcontenedor__carrito__elementos">
+                <div class="elementos__carrito">
+                    <button class="borrar__carrito">Vaciar carrito<i class="bi bi-trash"></i></button>
+                </div>
+                <div class="precio__por__unidad__carrito">
+                    Total: $500 USD
+                </div>
+                <div class="elementos__carrito">
+                    <button class="comprar__carrito">Comprar carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <section class="item__order">
         <div class="item__order__2">
@@ -87,6 +119,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/seccionCarrito.js"></script>
 </body>
 </html>
