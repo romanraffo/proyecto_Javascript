@@ -1,4 +1,4 @@
-let carritoNuevo = localStorage.getItem("clave-carrito"); //Aca se guarda la data de los productos seleccionados en Tienda
+let carritoNuevo = localStorage.getItem("clave-carrito");
 carritoNuevo = JSON.parse(carritoNuevo)
 
 const carritoVacio = document.querySelector("#carrito-vacio");
@@ -6,10 +6,9 @@ const carritoProductos = document.querySelector("#contenedor-productos-carrito")
 const carritoElementos = document.querySelector("#carrito-elementos");
 let borrarProducto = document.querySelectorAll(".borrar__producto__carrito");
 
-
 function agregarProductosSeccionCarrito(){
 
-    if(carritoNuevo){
+    if(carritoNuevo && carritoNuevo.length > 0){
         carritoVacio.classList.add("desactivado");
         carritoProductos.classList.remove("desactivado");
         carritoElementos.classList.remove("desactivado");
@@ -53,15 +52,19 @@ function renovarEliminarCarrito(){
 }
 
 function borrarProductoCarrito(e){
-    let idBoton = e.currentTarget.id
-    const index = carrito.findIndex(producto => producto.id === idBoton);
-    carritoNuevo.splice(index, 1);
-    Swal.fire({
-        title: "Producto eliminado",
-        icon: "error"
-    });
-
-    agregarProductosSeccionCarrito();
-
-    localStorage.setItem("producto-eliminar", JSON.stringify(carritoNuevo));
+    let idBoton = e.currentTarget.id;
+    const index = carritoNuevo.findIndex(producto => producto.id === idBoton);
+    if (index !== -1) {
+        carritoNuevo.splice(index, 1);
+        Swal.fire({
+            title: "Producto eliminado",
+            icon: "error"
+        });
+        // Aca se actualiza el almacenamiento local después de eliminar un producto del carrito
+        localStorage.setItem("clave-carrito", JSON.stringify(carritoNuevo));
+        // Y despues se actualiza la representación visual del carrito
+        agregarProductosSeccionCarrito();
+    } else {
+        console.error("Producto no encontrado en el carrito.");
+    }
 }

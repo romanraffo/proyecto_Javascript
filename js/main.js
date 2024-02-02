@@ -58,8 +58,7 @@ function cargarProductos(productosElegidos) { //Se crea la funcion cargarproduct
     renovarAgregarCarrito() 
 }
 
-cargarProductos(productos);
-
+cargarProductos(productos)
 botonesSecciones.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
@@ -71,6 +70,7 @@ botonesSecciones.forEach(boton => {
         }
     })
 })
+
 
 function renovarAgregarCarrito(){
 
