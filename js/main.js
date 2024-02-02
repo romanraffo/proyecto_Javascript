@@ -29,7 +29,7 @@ let agregarCarrito = document.querySelector(".agregar__carrito");
 
 let numeroCarrito = document.querySelector("#numero-carrito");
 
-const carrito = [];
+let carrito = [];
 
 let nuevoContadorCarrito = 0;
 
@@ -100,10 +100,11 @@ function agregarAlCarrito(e){
 
     numeroDelCarrito ()
 
-    localStorage.setItem("clave-carrito", JSON.stringify(carrito))
+    localStorage.setItem("clave-carrito", JSON.stringify(carrito));
 }
 
 function numeroDelCarrito (){
     let numeroActualizado = carrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0)
     numeroCarrito.innerText = numeroActualizado;
 }
+

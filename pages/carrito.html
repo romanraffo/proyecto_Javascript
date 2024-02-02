@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer-tech // Inicio</title>
+    <title>Gamer-tech // Carrito</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
@@ -32,14 +32,24 @@
         <div class="carrito__compras__titulo">
             <p class="carrito__compras__parrafo__titulo">Carrito de compras</p>
         </div>
-        <div class="carrito__vacio" id="carrito-vacio">
-            <!-- Esta parte se rellena en JS, Seccion "seccionCarrito.js" -->
+        <div class="carrito__vacio">
+            <p id="carrito-vacio" class="carrito__compras__parrafo__vacio">No hay productos en el carrito...<i class="bi bi-cart2"></i></p>
         </div>
-        <div class="contenedor__carrito" id="contenedor-carrito">
-            <!-- Esta parte se rellena en JS, Seccion "seccionCarrito.js" -->
+        <div class="contenedor__carrito desactivado" id="contenedor-productos-carrito" >
+            <!-- Completado en JS, seccionCarrito.js-->
         </div>
-        <div class="contenedor__carrito__elementos" id="contenedor-total">
-            <!-- Esta parte se rellena en JS, Seccion "seccionCarrito.js" -->
+        <div class="contenedor__carrito__elementos" id="carrito-elementos">
+            <div class="subcontenedor__carrito__elementos">
+                <div class="elementos__carrito">
+                    <button class="borrar__carrito">Vaciar carrito<i class="bi bi-trash"></i></button>
+                </div>
+                <div class="precio__por__unidad__carrito">
+                    Total: $500 USD
+                </div>
+                <div class="elementos__carrito">
+                    <button class="comprar__carrito">Comprar carrito</button>
+                </div>
+            </div>
         </div>
     </main>
 

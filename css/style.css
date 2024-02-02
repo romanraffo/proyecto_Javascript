@@ -540,6 +540,7 @@
     margin-left: 2px;
 }
 
+
 /************/
 
 .productos {
@@ -870,6 +871,9 @@
     align-items: center;
 }
 
+.desactivado {
+    display: none;
+}
 
 /*SECCION FOOTER👇*/
 
