@@ -1,5 +1,3 @@
-
-
 let carritoNuevo = localStorage.getItem("clave-carrito");
 
 carritoNuevo = JSON.parse(carritoNuevo);
@@ -89,9 +87,15 @@ function borrarProductoCarrito(e){
 
 comprarCarrito.addEventListener("click", comprarCarritoClick);
 function comprarCarritoClick(){
+    let carritoTotalActualizado = totalDeCarrito();
     Swal.fire({
         title: "¡Gracias por su compra! ",
         icon: "success",
+        html:`
+        <div>
+            <p style="font-family: 'Quicksand', sans-serif;">Valor total de la compra: $${carritoTotalActualizado}</p>
+        </div>
+        `,
         customClass: {
             title: `alert__font`
         },
@@ -118,4 +122,5 @@ function borrarCarritoClick(){
 function totalDeCarrito(){
     let carritoTotalActualizado = carritoNuevo.reduce((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0);
     compraTotal.innerText = carritoTotalActualizado;
+    return carritoTotalActualizado;
 }
