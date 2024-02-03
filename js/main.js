@@ -95,7 +95,18 @@ function agregarAlCarrito(e){
 
     Swal.fire({
         title: "Producto agregado al carrito",
-        icon: "success"
+        html:`
+        <div>
+            <img src="${productoAgregado.imagen}" style="max-width: 50%;">
+            <p style="font-family: 'Quicksand', sans-serif;">${productoAgregado.nombre}</p>
+            <p style="font-family: 'Quicksand', sans-serif;">Precio: $${productoAgregado.precio}</p>
+        </div>
+        `,
+        icon: "success",
+        customClass: {
+            title: `alert__font`,
+        },
+        confirmButtonText: 'Aceptar'
     });
 
     numeroDelCarrito ()

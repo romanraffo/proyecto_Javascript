@@ -31,6 +31,7 @@
     <main class="main__carrito">
         <div class="carrito__compras__titulo">
             <p class="carrito__compras__parrafo__titulo">Carrito de compras</p>
+            <a href="./tienda.html" class="a__volver__tienda"><p class="carrito__compras__parrafo__subtitulo"><i class="bi bi-arrow-left"></i>volver a la tienda</p></a>
         </div>
         <div class="carrito__vacio">
             <p id="carrito-vacio" class="carrito__compras__parrafo__vacio">No hay productos en el carrito...<i class="bi bi-cart2"></i></p>
@@ -41,13 +42,13 @@
         <div class="contenedor__carrito__elementos" id="carrito-elementos">
             <div class="subcontenedor__carrito__elementos">
                 <div class="elementos__carrito">
-                    <button class="borrar__carrito">Vaciar carrito<i class="bi bi-trash"></i></button>
+                    <button class="borrar__carrito" id="borrar-carrito">Vaciar carrito<i class="bi bi-trash"></i></button>
                 </div>
                 <div class="precio__por__unidad__carrito">
-                    Total: $500 USD
+                    Total: <p class="carrito__total" id="carrito-total"></p>
                 </div>
                 <div class="elementos__carrito">
-                    <button class="comprar__carrito">Comprar carrito</button>
+                    <button class="comprar__carrito" id="comprar-carrito">Comprar carrito</button>
                 </div>
             </div>
         </div>

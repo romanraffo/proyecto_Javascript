@@ -620,6 +620,10 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.alert__font{
+    font-family: 'Quicksand', sans-serif;
+}
+
 /***************/
 /***************/
 
@@ -709,6 +713,7 @@
 .carrito__compras__titulo{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     
     padding: 20px;
 }
@@ -716,6 +721,25 @@
 .carrito__compras__parrafo__titulo{
     font-size: 1.70rem;
     font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.carrito__compras__parrafo__subtitulo{
+    font-size: 1.30rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #d4a808;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+}
+.carrito__compras__parrafo__subtitulo:hover{
+    text-decoration: underline 2px #ebb904;
+}
+
+.a__volver__tienda{
+    text-decoration: none;
 }
 
 /*carrito vacio👇*/
@@ -818,7 +842,7 @@
 }
 
 .subcontenedor__carrito__elementos{
-    width: 500px;
+    width: 520px;
     height: 150px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -853,6 +877,11 @@
 
 .precio__por__unidad__carrito{
     font-size: 1.40rem;
+    display: flex;
+}
+
+.carrito__total{
+   margin-left: 5px;
 }
 
 .comprar__carrito{
