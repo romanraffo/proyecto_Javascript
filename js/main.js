@@ -1,25 +1,11 @@
-const productos = [
-    {id: "consola-01", nombre: "Playstation 5", precio: 500, imagen: "../img/play5.webp", categoria:{nombre: "Consolas", id: "consolas"}},
-    {id: "consola-02", nombre: "Xbox S", precio: 290, imagen: "../img/xboxS.png", categoria:{nombre: "Consolas", id: "consolas"}},
-    {id: "consola-03", nombre: "Nintendo Switch", precio: 215, imagen: "../img/Nintendo.Switch.webp", categoria:{nombre: "Consolas", id: "consolas"}},
-    {id: "consola-04", nombre: "Playstation 4", precio: 310, imagen: "../img/play4.webp", categoria:{nombre: "Consolas", id: "consolas"}},
-    {id: "Computadora-01", nombre: "Pc Gamer Ryzen", precio: 540, imagen: "../img/pc.ryzen.png", categoria:{nombre: "Computadoras", id: "computadoras"}},
-    {id: "Computadora-02", nombre: "Pc Gamer Intel", precio: 699, imagen: "../img/pc.intel.png", categoria:{nombre: "Computadoras", id: "computadoras"}},
-    {id: "Notebook-01", nombre: "Notebook BANGHO Max", precio: 500, imagen: "../img/notebook.bangho.jpg", categoria:{nombre: "Notebooks", id: "computadoras"}},
-    {id: "Notebook-02", nombre: "Notebook LENOVO", precio: 300, imagen: "../img/notebook.lenovo.jpg", categoria:{nombre: "Notebooks", id: "computadoras"}},
-    {id: "Notebook-03", nombre: "Notebook HP 15.6", precio: 550, imagen: "../img/notebook.Hp.jpg", categoria:{nombre: "Notebooks", id: "computadoras"}},
-    {id: "Mouse-01", nombre: "Mouse Logitech G502", precio: 40, imagen: "../img/mouse.logi.png", categoria:{nombre: "Mouses", id: "perifericos"}},
-    {id: "Mouse-02", nombre: "Mouse Logitech G300S", precio: 34, imagen: "../img/mouse.logi2.png", categoria:{nombre: "Mouses", id: "perifericos"}},
-    {id: "Mouse-03", nombre: "Mouse Redragon", precio: 40, imagen: "../img/mouse.redragon.png", categoria:{nombre: "Mouses", id: "perifericos"}},
-    {id: "Auricular-01", nombre: "Auriculares Philips", precio: 100, imagen: "../img/auriculares.philips.webp", categoria:{nombre: "Auriculares", id: "perifericos"}},
-    {id: "Auricular-02", nombre: "Airpods Max Apple", precio: 350, imagen: "../img/auriculares.apple.webp", categoria:{nombre: "Auriculares", id: "perifericos"}},
-    {id: "Auricular-03", nombre: "Auriculares Hyperex", precio: 40, imagen: "../img/auriculares.Hyperex.png", categoria:{nombre: "Auriculares", id: "perifericos"}},
-    {id: "Control-01", nombre: "Joystick Ps5", precio: 60, imagen: "../img/joystick.ps5.png", categoria:{nombre: "Controles", id: "perifericos"}},
-    {id: "Control-02", nombre: "Joystick Xbox-S", precio: 55, imagen: "../img/joystick.xbox.jpg", categoria:{nombre: "Controles", id: "perifericos"}},
+let productos = [];
 
-];
-
-
+fetch("../data.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
   
 const contenedorProductos = document.querySelector("#contenedor-productos"); //Se llaman a los contenedores principales segun su id.
 
@@ -58,7 +44,7 @@ function cargarProductos(productosElegidos) { //Se crea la funcion cargarproduct
     renovarAgregarCarrito() 
 }
 
-cargarProductos(productos)
+
 botonesSecciones.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
