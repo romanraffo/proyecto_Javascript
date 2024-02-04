@@ -1,3 +1,5 @@
+/*Variables declaradas👇*/
+
 let productos = [];
 
 fetch("../data.json")
@@ -7,7 +9,7 @@ fetch("../data.json")
         cargarProductos(productos);
     })
   
-const contenedorProductos = document.querySelector("#contenedor-productos"); //Se llaman a los contenedores principales segun su id.
+const contenedorProductos = document.querySelector("#contenedor-productos"); 
 
 const botonesSecciones = document.querySelectorAll(".boton__categoria");
 
@@ -24,7 +26,10 @@ const form = document.querySelector("#form");
 const formInput = document.querySelector("#form-input");
 
 
+/*Empieza el algoritmo👇*/
 
+
+//Cargar los productos👇
 function cargarProductos(productosElegidos) { //Se crea la funcion cargarproductos, donde aca se cargan los elementos html y luego se proporcionan los eventos.
 
     contenedorProductos.innerHTML = "";
@@ -49,6 +54,7 @@ function cargarProductos(productosElegidos) { //Se crea la funcion cargarproduct
 }
 
 
+//Botenes de secciones productos👇
 botonesSecciones.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
@@ -62,6 +68,7 @@ botonesSecciones.forEach(boton => {
 })
 
 
+//Agregas los productos al carrito👇
 function renovarAgregarCarrito(){
 
     agregarCarrito = document.querySelectorAll(".agregar__carrito");
@@ -84,12 +91,13 @@ function agregarAlCarrito(e){
     }
 
     Swal.fire({
+        
         title: "Producto agregado al carrito",
         html:`
         <div>
             <img src="${productoAgregado.imagen}" style="max-width: 50%;">
             <p style="font-family: 'Quicksand', sans-serif;">${productoAgregado.nombre}</p>
-            <p style="font-family: 'Quicksand', sans-serif;">Precio: $${productoAgregado.precio}</p>
+            <p style="font-family: 'Quicksand', sans-serif;">Precio: $${productoAgregado.precio} USD</p>
         </div>
         `,
         icon: "success",
@@ -97,6 +105,7 @@ function agregarAlCarrito(e){
             title: `alert__font`,
         },
         confirmButtonText: 'Aceptar'
+
     });
 
     numeroDelCarrito ()
@@ -104,11 +113,15 @@ function agregarAlCarrito(e){
     localStorage.setItem("clave-carrito", JSON.stringify(carrito));
 }
 
+
+//Actualizacion de numero del carrito en tienda👇
 function numeroDelCarrito (){
     let numeroActualizado = carrito.reduce((acumulador, producto) => acumulador + producto.cantidad, 0)
     numeroCarrito.innerText = numeroActualizado;
 }
 
+
+//Barra de busqueda de productos👇
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -117,10 +130,8 @@ form.addEventListener("submit", (e) => {
     let productosEncontrados = productos.filter(producto => producto.nombre.toLowerCase().startsWith(valorInput));
 
     if (productosEncontrados.length > 0) {
-        // Mostrar solo los productos encontrados
-        cargarProductos(productosEncontrados);
+        cargarProductos(productosEncontrados); // Mostrar solo los productos encontrados
     } else {
-        // Mostrar un mensaje de "No se encontraron productos"
-        contenedorProductos.innerHTML = "<p>No se encontraron productos</p>";
+        contenedorProductos.innerHTML = ` <p style="font-family: 'Quicksand', sans-serif; font-size: 1.40rem;"> No se encontraron los productos... </p> `; // Mostrar un mensaje de "No se encontraron productos"
     }
 });

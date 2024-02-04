@@ -1,3 +1,5 @@
+/*Variables declaradas👇*/
+
 let carritoNuevo = localStorage.getItem("clave-carrito");
 
 carritoNuevo = JSON.parse(carritoNuevo);
@@ -16,6 +18,11 @@ const borrarCarrito = document.querySelector("#borrar-carrito");
 
 const compraTotal = document.querySelector("#carrito-total");
 
+
+/*Empieza el algoritmo👇*/
+
+
+//Cargar los productos seleccionados en tienda.html👇
 function agregarProductosSeccionCarrito(){
 
     if(carritoNuevo && carritoNuevo.length > 0){
@@ -51,9 +58,12 @@ function agregarProductosSeccionCarrito(){
 
     renovarEliminarCarrito();
 }
+
+
 agregarProductosSeccionCarrito();
 
 
+//Botenes de borrar producto individual👇
 function renovarEliminarCarrito(){
 
     borrarProducto = document.querySelectorAll(".remove__carrito");
@@ -64,10 +74,12 @@ function renovarEliminarCarrito(){
 }
 
 function borrarProductoCarrito(e){
+
     let IdDelProducto = e.currentTarget.id;
     const index = carritoNuevo.findIndex(producto => producto.id === IdDelProducto);
     if (index !== -1) {
         carritoNuevo.splice(index, 1);
+        
         Swal.fire({
             title: "Producto eliminado",
             icon: "error",
@@ -76,24 +88,30 @@ function borrarProductoCarrito(e){
             },
             confirmButtonText: 'Aceptar'
         });
-        // Aca se actualiza el almacenamiento local después de eliminar un producto del carrito
-        localStorage.setItem("clave-carrito", JSON.stringify(carritoNuevo));
-        // Y despues se actualiza la representación visual del carrito
-        agregarProductosSeccionCarrito();
+        
+        localStorage.setItem("clave-carrito", JSON.stringify(carritoNuevo)); // Aca se actualiza el almacenamiento local después de eliminar un producto del carrito
+        
+        agregarProductosSeccionCarrito(); // Y despues se actualiza la representación visual del carrito
     } else {
+
         console.error("Producto no encontrado en el carrito.");
+
     }
 }
 
+
+//Boton de comprar carrito👇
 comprarCarrito.addEventListener("click", comprarCarritoClick);
+
 function comprarCarritoClick(){
     let carritoTotalActualizado = totalDeCarrito();
+
     Swal.fire({
         title: "¡Gracias por su compra! ",
         icon: "success",
         html:`
         <div>
-            <p style="font-family: 'Quicksand', sans-serif;">Valor total de la compra: $${carritoTotalActualizado}</p>
+            <p style="font-family: 'Quicksand', sans-serif;">Valor total de la compra: $${carritoTotalActualizado} USD</p>
         </div>
         `,
         customClass: {
@@ -101,12 +119,16 @@ function comprarCarritoClick(){
         },
         confirmButtonText: 'Aceptar'
     });
+
 }
 
+
+//Boton de borrar carrito👇
 borrarCarrito.addEventListener("click", borrarCarritoClick);
 function borrarCarritoClick(){
     carritoNuevo.length = 0;
     localStorage.setItem("clave-carrito", JSON.stringify(carritoNuevo));
+
     agregarProductosSeccionCarrito();
 
     Swal.fire({
@@ -119,8 +141,12 @@ function borrarCarritoClick(){
     });
 }
 
+
+//Actualizar valor total de carrito👇
 function totalDeCarrito(){
     let carritoTotalActualizado = carritoNuevo.reduce((acumulador, producto) => acumulador + producto.precio * producto.cantidad, 0);
+
     compraTotal.innerText = carritoTotalActualizado;
+
     return carritoTotalActualizado;
 }
