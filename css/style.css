@@ -201,9 +201,6 @@
     color: #FFC800;
 }
 
-.separado__svg{
-}
-
 /************/
 
 /***Seccion marcas***/
@@ -524,10 +521,6 @@
 
     padding-top: 20px;
     padding-bottom: 10px;
-}
-
-.formulario_form{
-    
 }
 
 .formulario_input{
@@ -865,10 +858,6 @@
     font-size: 1.40rem;
 }
 
-.borrar__producto__carrito{
-
-}
-
 .remove__carrito{
     font-size: 1.80rem;
     text-decoration: none;
@@ -968,10 +957,6 @@
     padding-bottom: 100px;
 }
 
-.div__left__footer{
-
-}
-
 .footer__tittles{
     font-size: 1.10rem;
     color: #31a20f;
@@ -983,10 +968,6 @@
 
 .div__center__footer {
     margin-right: 110px;
-}
-
-.div__right__footer{
-
 }
 
 .div__footer__redes{
