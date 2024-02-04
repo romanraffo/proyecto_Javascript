@@ -514,6 +514,48 @@
     min-height: 70.5vh;
 }
 
+/*form barra busqueda👇*/
+
+.formulario{
+    display: flex;
+    justify-content: center;
+
+    background-color: #ddad00;
+
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.formulario_form{
+    
+}
+
+.formulario_input{
+    padding: 10px 40px 10px 40px;
+    border-radius: 10px 0px 0px 10px;
+    border: #2c3030 2px solid;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+
+}
+
+.formulario_boton{
+    padding: 10px 10px 10px 10px;
+    border-radius: 0px 10px 10px 0px;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    border: #2c3030 2px solid;
+}
+
+.formulario_boton:hover{
+    background-color: #2c3030;
+    color: white;
+}
+
+/*Termina form barra busqueda*/
+
 .tienda__seccion{
     display: flex;
     justify-content: center;
@@ -1922,6 +1964,16 @@
     display: flex;
     justify-content: center;
    }
+
+   /*barra de busqueda*/
+
+   .formulario_input{
+    padding: 10px 30px 10px 30px;
+   }
+
+   .formulario_boton{
+    padding: 10px 5px 10px 5px;
+    }
 
   /*Inicio👇*/
 

@@ -19,6 +19,10 @@ let carrito = [];
 
 let nuevoContadorCarrito = 0;
 
+const form = document.querySelector("#form");
+
+const formInput = document.querySelector("#form-input");
+
 
 
 function cargarProductos(productosElegidos) { //Se crea la funcion cargarproductos, donde aca se cargan los elementos html y luego se proporcionan los eventos.
@@ -105,3 +109,18 @@ function numeroDelCarrito (){
     numeroCarrito.innerText = numeroActualizado;
 }
 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let valorInput = formInput.value.toLowerCase();
+
+    let productosEncontrados = productos.filter(producto => producto.nombre.toLowerCase().startsWith(valorInput));
+
+    if (productosEncontrados.length > 0) {
+        // Mostrar solo los productos encontrados
+        cargarProductos(productosEncontrados);
+    } else {
+        // Mostrar un mensaje de "No se encontraron productos"
+        contenedorProductos.innerHTML = "<p>No se encontraron productos</p>";
+    }
+});
